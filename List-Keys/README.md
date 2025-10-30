@@ -1,16 +1,24 @@
-# React + Vite
+List & Keys (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A tiny Vite + React example showing how to render lists in React and why stable `key` props matter for performance and correct UI updates.
 
-Currently, two official plugins are available:
+Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Install dependencies: `npm install`
+- Start the dev server: `npm run dev`
 
-## React Compiler
+What it demonstrates
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Rendering arrays with `Array.map`
+- Using unique, stable `key` values for list items
+- Avoiding anti-patterns like using the array index as a key when items can reorder
 
-## Expanding the ESLint configuration
+Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/App.jsx`: Minimal demo rendering a list with proper keys
+- `src/main.jsx`: App bootstrap
+
+Notes on keys
+
+- Keys help React identify which items changed, were added, or removed
+- Prefer persistent IDs from data over indices

@@ -6,6 +6,8 @@ A collection of React tutorial projects demonstrating core concepts, hooks, and 
 
 - **ReactTutorial**: Basic component creation, props, and styling
 - **useEffectTutorial**: useEffect hook for side effects and timers
+- **List-Keys**: Rendering lists with proper key props for performance
+- **TopBarAssignment**: Responsive navigation bar component with active link highlighting
 - **NewPosts**: State management, re-rendering, and dynamic content
 - **SPA**: Single-page application with React Router (routing, navigation, layouts)
 - **Timer**: Timer application demonstrating useRef hook for efficient interval management

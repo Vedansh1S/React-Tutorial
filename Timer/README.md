@@ -1,16 +1,34 @@
-# React + Vite
+# Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React timer application demonstrating the use of `useRef` hook for managing intervals and preventing unnecessary re-renders.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Start/Stop timer functionality
+- Counter increments every second
+- Prevents multiple interval creation
+- Clean state management with `useRef`
 
-## React Compiler
+## Concepts Demonstrated
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **useRef hook**: Used to store the interval ID without causing re-renders
+- **useState**: Manages the counter state
+- **setInterval/clearInterval**: JavaScript timer functions
+- **Conditional rendering**: Prevents starting multiple timers
 
-## Expanding the ESLint configuration
+## Key Learning Points
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project demonstrates why `useRef` is preferred over `useState` for storing interval IDs:
+
+- `useRef` updates don't trigger re-renders, making it more efficient
+- Using `useState` for the timer would cause an extra unnecessary re-render
+- The interval ID survives re-renders and remains accessible for cleanup
+
+## Running the Project
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.

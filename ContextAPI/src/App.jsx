@@ -37,7 +37,7 @@ function ToggleStatus() {
 
   return (
     <>
-      <button onClick={toggle}>Toggle the bulb state</button>
+      <button onClick={()=>{setIsOn(prev => !prev)}}>Toggle the bulb state</button>
     </>
   );
 }

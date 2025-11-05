@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce.js";
 
 function App() {
-  const [query, setQuery] = useState("");
-  const debouncedQuery = useDebounce(query, 500);
+  const [query, setQuery] = useState(""); // Step 2: the query state is updated to the value of the input field
+  const debouncedQuery = useDebounce(query, 500); // Step 3: the debouncedQuery state is updated to the value of the query state after 500ms
 
+  // Step 7: since the debouncedQuery state is updated after 500ms, the useEffect hook is used to log the debouncedQuery state
   useEffect(() => {
     if (debouncedQuery) {
       console.log("Debounced query for: " + debouncedQuery);
@@ -13,9 +14,10 @@ function App() {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.heading}>🔍 Debounced Search</h2>
+      <h2 style={styles.heading}> Debounced Search </h2>
       <input
         style={styles.input}
+        //Step 1: Program execution starts here, onchange is triggered and setQuery is called, which updates the query state
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Type to search..."
@@ -38,7 +40,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    background: "linear-gradient(135deg, #e0f7fa, #e1bee7)",
+    background: "linear-gradient(135deg,rgb(169, 198, 202),rgb(228, 121, 139))",
     fontFamily: "Inter, sans-serif",
   },
   heading: {

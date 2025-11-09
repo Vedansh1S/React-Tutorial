@@ -14,6 +14,7 @@ A collection of React tutorial projects demonstrating core concepts, hooks, and 
 - **CustomFetch**: Reusable `useFetch` hook with input focus and Enter-to-fetch behavior
 - **CustomHooks**: Simple `useCounter` custom hook with increment/decrement/reset
 - **Debounce**: `useDebounce` hook demo that delays expensive work while typing
+- **Tailwind**: Tailwind CSS tutorials (Flexbox and Grid layouts)
 
 Each project focuses on specific React concepts with practical examples and clean implementations.
 
